@@ -1,3 +1,6 @@
+#![no_std]
+#![feature(alloc)]
+
 #[macro_use]
 extern crate debug_unreachable;
 extern crate unreachable;
@@ -10,6 +13,7 @@ extern crate serde;
 #[cfg(test)]
 extern crate quickcheck;
 
+#[macro_use] extern crate alloc;
 
 #[cfg(feature = "serde")]
 mod serialization;

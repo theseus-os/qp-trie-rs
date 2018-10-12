@@ -1,6 +1,6 @@
-use std::fmt;
-use std::slice::{Iter, IterMut};
-use std::vec::IntoIter;
+use core::fmt;
+use core::slice::{Iter, IterMut};
+use alloc::vec::{Vec, IntoIter};
 
 use unreachable::UncheckedOptionExt;
 

@@ -1,4 +1,5 @@
-use std::borrow::Borrow;
+use core::borrow::Borrow;
+use alloc::vec::Vec;
 
 use node::Node;
 

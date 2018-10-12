@@ -1,6 +1,7 @@
-use std::borrow::Borrow;
-use std::fmt;
-use std::mem;
+use core::borrow::Borrow;
+use core::fmt;
+use core::mem;
+use alloc;
 
 use unreachable::UncheckedOptionExt;
 
@@ -219,20 +220,20 @@ impl<K, V> Branch<K, V> {
 
 
     #[inline]
-    pub fn iter(&self) -> ::std::slice::Iter<Node<K, V>> {
+    pub fn iter(&self) -> ::core::slice::Iter<Node<K, V>> {
         self.entries.iter()
     }
 
 
     #[inline]
-    pub fn iter_mut(&mut self) -> ::std::slice::IterMut<Node<K, V>> {
+    pub fn iter_mut(&mut self) -> ::core::slice::IterMut<Node<K, V>> {
         self.entries.iter_mut()
     }
 }
 
 
 impl<K, V> IntoIterator for Branch<K, V> {
-    type IntoIter = ::std::vec::IntoIter<Node<K, V>>;
+    type IntoIter = alloc::vec::IntoIter<Node<K, V>>;
     type Item = Node<K, V>;
 
     #[inline]

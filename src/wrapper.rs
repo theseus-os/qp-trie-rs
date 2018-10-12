@@ -1,7 +1,9 @@
-use std::borrow::Borrow;
-use std::fmt;
-use std::hash::{Hash, Hasher};
-use std::ops::Deref;
+use core::borrow::Borrow;
+use core::fmt;
+use core::hash::{Hash, Hasher};
+use core::ops::Deref;
+use alloc::string::String;
+use alloc::borrow::ToOwned;
 
 use trie::Break;
 
